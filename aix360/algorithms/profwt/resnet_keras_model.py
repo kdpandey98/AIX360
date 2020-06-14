@@ -1,23 +1,4 @@
-
-# Copyright 2019 IBM Research
-
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-
-#     http://www.apache.org/licenses/LICENSE-2.0
-
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-
-
-
-# COPYRIGHT
-
+#
 # All contributions by François Chollet:
 # Copyright (c) 2015 - 2019, François Chollet.
 # All rights reserved.
@@ -37,28 +18,10 @@
 # Each contributor holds copyright over their respective contributions.
 # The project versioning (Git) records all such contribution source information.
 
-# LICENSE
-
-# The MIT License (MIT)
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
+## This program is licenced under the MIT License,
+## contained in the "supplementary license" folder present in the root directory.
+##
+## Modifications Copyright (c) 2019 IBM Corporation
 
 
 
@@ -205,11 +168,10 @@ def resnet_v1(input_shape, num_res_blocks, num_classes=10):
     # Returns
         model (Model): Keras model instance
     """
-    #if (depth - 2) % 6 != 0:
-    #    raise ValueError('depth should be 6n+2 (eg 20, 32, 44 in [a])')
+
     # Start model definition.
     num_filters = 16
-    #num_res_blocks = int((depth - 2) / 6)
+ 
 
     inputs = Input(shape=input_shape)
     x = resnet_layer(inputs=inputs)
@@ -253,21 +215,6 @@ def resnet_v1(input_shape, num_res_blocks, num_classes=10):
 
 
 
-
-# Model parameter
-# ----------------------------------------------------------------------------
-#           |      | 200-epoch | Orig Paper| 200-epoch | Orig Paper| sec/epoch
-# Model     |  n   | ResNet v1 | ResNet v1 | ResNet v2 | ResNet v2 | GTX1080Ti
-#           |v1(v2)| %Accuracy | %Accuracy | %Accuracy | %Accuracy | v1 (v2)
-# ----------------------------------------------------------------------------
-# ResNet20  | 3 (2)| 92.16     | 91.25     | -----     | -----     | 35 (---)
-# ResNet32  | 5(NA)| 92.46     | 92.49     | NA        | NA        | 50 ( NA)
-# ResNet44  | 7(NA)| 92.50     | 92.83     | NA        | NA        | 70 ( NA)
-# ResNet56  | 9 (6)| 92.71     | 93.03     | 93.01     | NA        | 90 (100)
-# ResNet110 |18(12)| 92.65     | 93.39+-.16| 93.15     | 93.63     | 165(180)
-# ResNet164 |27(18)| -----     | 94.07     | -----     | 94.54     | ---(---)
-# ResNet1001| (111)| -----     | 92.39     | -----     | 95.08+-.14| ---(---)
-# ---------------------------------------------------------------------------
 
 
 

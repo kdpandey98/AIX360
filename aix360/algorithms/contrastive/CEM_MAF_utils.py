@@ -1,4 +1,4 @@
-## Utils.py -- Some utility functions 
+## Utils.py -- Some utility functions
 ##
 ## Copyright (C) 2018, PaiShun Ting <paishun@umich.edu>
 ##                     Chun-Chen Tu <timtu@umich.edu>
@@ -7,7 +7,10 @@
 ## Copyright (C) 2016, Nicholas Carlini <nicholas@carlini.com>.
 ##
 ## This program is licenced under the BSD 2-Clause licence,
-## contained in the LICENCE file in this directory.
+## contained in the "supplementary license" folder present in the root directory.
+##
+## Modifications Copyright (c) 2019 IBM Corporation
+
 
 import tensorflow as tf
 import os
@@ -50,7 +53,7 @@ class CELEBAModel:
         self.image_size = 224
         self.num_channels = 3
         self.num_labels = 8
-    
+
         input_layer = Input(shape=(self.image_size, self.image_size, self.num_channels))
         weights = "imagenet" if use_imagenet_pretrain else None
         if nn_type == "resnet50":
@@ -68,17 +71,17 @@ class CELEBAModel:
         if use_softmax:
             x = Activation("softmax")(x)
         model = Model(inputs=base_model.input, outputs=x)
-    
+
         # for layer in base_model.layers:
         # 	layer.trainable = False
-    
-    
+
+
         if restore:
             print("Load: {}".format(restore))
             model.load_weights(restore)
-    
+
         self.model = model
-    
+
     def predict(self, data):
         # this is used inside tf session, data should be a tensor
         return self.model(data)

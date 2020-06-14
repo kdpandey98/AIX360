@@ -1,3 +1,19 @@
+##
+##
+## Copyright (C) 2018, PaiShun Ting <paishun@umich.edu>
+##                     Chun-Chen Tu <timtu@umich.edu>
+##                     Pin-Yu Chen <Pin-Yu.Chen@ibm.com>
+## Copyright (C) 2017, Yash Sharma <ysharma1126@gmail.com>.
+## Copyright (C) 2016, Nicholas Carlini <nicholas@carlini.com>.
+##
+## This program is licenced under the BSD 2-Clause licence,
+## contained in the "supplementary license" folder present in the root directory.
+##
+## Modifications Copyright (c) 2019 IBM Corporation
+
+
+
+
 import sys
 import numpy as np
 import tensorflow as tf

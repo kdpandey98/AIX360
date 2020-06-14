@@ -1,10 +1,10 @@
-# AI Explainability 360 (v0.1.0)
+# AI Explainability 360 (v0.2.0)
 
 [![Build Status](https://travis-ci.com/IBM/AIX360.svg?branch=master)](https://travis-ci.com/IBM/AIX360)
 [![Documentation Status](https://readthedocs.org/projects/aix360/badge/?version=latest)](https://aix360.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/aix360.svg)](https://badge.fury.io/py/aix360)
 
-The AI Explainability 360 toolkit is an open-source library that supports interpretability and explainability of datasets and machine learning models. The AI Explainability 360 Python package includes a comprehensive set of algorithms that cover different dimensions of explanations along with proxy explainability metrics. 
+The AI Explainability 360 toolkit is an open-source library that supports interpretability and explainability of datasets and machine learning models. The AI Explainability 360 Python package includes a comprehensive set of algorithms that cover different dimensions of explanations along with proxy explainability metrics.           
 
 The [AI Explainability 360 interactive experience](http://aix360.mybluemix.net/data) provides a gentle introduction to the concepts and capabilities by walking through an example use case for different consumer personas. The [tutorials and example notebooks](./examples) offer a deeper, data scientist-oriented introduction. The complete API is also available. 
 
@@ -19,11 +19,13 @@ We have developed the package with extensibility in mind. This library is still 
 - ProtoDash ([Gurumoorthy et al., 2019](https://arxiv.org/abs/1707.01212))
 - Disentangled Inferred Prior VAE ([Kumar et al., 2018](https://openreview.net/forum?id=H1kG7GZAW))
 
-### Local post-hoc explanation
+### Local post-hoc explanation 
 
 - ProtoDash ([Gurumoorthy et al., 2019](https://arxiv.org/abs/1707.01212))
 - Contrastive Explanations Method ([Dhurandhar et al., 2018](https://papers.nips.cc/paper/7340-explanations-based-on-the-missing-towards-contrastive-explanations-with-pertinent-negatives))
 - Contrastive Explanations Method with Monotonic Attribute Functions ([Luss et al., 2019](https://arxiv.org/abs/1905.12698))
+- LIME ([Ribeiro et al. 2016](https://arxiv.org/abs/1602.04938),  [Github](https://github.com/marcotcr/lime))
+- SHAP ([Lundberg, et al. 2017](http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions),  [Github](https://github.com/slundberg/shap))
 
 ### Local direct explanation
 
@@ -121,14 +123,14 @@ paper.
 
 ```
 @misc{aix360-sept-2019,
-    title = "One Explanation Does Not Fit All: A Toolkit and Taxonomy of AI Explainability Techniques",
-    author = {Vijay Arya and Rachel K. E. Bellamy and Pin-Yu Chen and Amit Dhurandhar and Michael Hind
+title = "One Explanation Does Not Fit All: A Toolkit and Taxonomy of AI Explainability Techniques",
+author = {Vijay Arya and Rachel K. E. Bellamy and Pin-Yu Chen and Amit Dhurandhar and Michael Hind
 and Samuel C. Hoffman and Stephanie Houde and Q. Vera Liao and Ronny Luss and Aleksandra Mojsilovi\'c
 and Sami Mourad and Pablo Pedemonte and Ramya Raghavendra and John Richards and Prasanna Sattigeri
 and Karthikeyan Shanmugam and Moninder Singh and Kush R. Varshney and Dennis Wei and Yunfeng Zhang},
-    month = sept,
-    year = {2019},
-    url = {https://arxiv.org/abs/1909.03012}
+month = sept,
+year = {2019},
+url = {https://arxiv.org/abs/1909.03012}
 }
 ```
 
@@ -136,4 +138,15 @@ and Karthikeyan Shanmugam and Moninder Singh and Kush R. Varshney and Dennis Wei
 
 * Introductory [video](https://www.youtube.com/watch?v=Yn4yduyoQh4) to AI
   Explainability 360 by Vijay Arya and Amit Dhurandhar, September 5, 2019 (35 mins)
+
+## Acknowledgements
+
+AIX360 is built with the help of several open source packages. All of these are listed in setup.py and some of these include: 
+* Tensorflow https://www.tensorflow.org/about/bib
+* Pytorch https://github.com/pytorch/pytorch
+* scikit-learn https://scikit-learn.org/stable/about.html
+
+## License Information
+
+Please view both the [LICENSE](https://github.com/vijay-arya/AIX360/blob/master/LICENSE) file and the folder [supplementary license](https://github.com/vijay-arya/AIX360/tree/master/supplementary%20license) present in the root directory for license information. 
 
